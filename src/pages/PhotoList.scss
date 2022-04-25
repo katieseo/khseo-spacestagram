@@ -1,0 +1,107 @@
+/* ====================
+    * CSS Structure
+    - PhotoList
+    - Media queries
+ ==================== */
+
+/* ==========================================================================
+ PhotoList
+ ========================================================================== */
+
+.photolist__container {
+  column-count: 1;
+  column-gap: 20px;
+}
+
+.photolist__frame {
+  background: var(--color-photo-frame);
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 20px;
+  transition:1s ease all;
+  width: 100%;
+
+  .photolist__date {
+    font-size: .75rem;
+    margin-bottom: .75rem;
+  }
+
+  .photolist__img {
+    text-align: center;
+  }
+
+  .photolist__footer {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .photolist__like_wrap {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    height: 40px;
+    justify-content: center;
+    position: relative;
+    transition: all;
+    width: 40px;
+
+    &.on .photolist__like {
+      background-color: var(--color-like);
+    }
+
+    &.on::before {
+      animation: like 1.5s ease-in-out;
+      background-image: url(../images/icon-heart-ani.svg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      content: '';
+      height: 46px;
+      opacity: 0;
+      position: absolute;
+      right: -2px;
+      top: 0;
+      width: 46px;
+    }
+
+    @keyframes like {
+      10% { opacity: 1; top: 0; } 
+      50% { opacity: 0; top: -60px; }
+      100% { opacity: 0; top: 0; }
+    }
+  }
+
+  .photolist__like {
+    background-color: var(--color-text-base);
+    background-size: 100%;
+    height: 30px;
+    mask-image: url(../images/icon-heart.svg);
+    mask-size: cover;
+    width: 30px;
+  }
+}
+
+/* ==========================================================================
+ Media queries
+ ========================================================================== */
+
+ @media screen and (min-width: 600px) {
+  .photolist__container {
+    column-count: 2;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .photolist__container {
+    column-count: 3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .photolist__container {
+    column-count: 4;
+  }
+}

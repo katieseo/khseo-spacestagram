@@ -1,0 +1,46 @@
+/* ==========================================================================
+ App
+ ========================================================================== */
+
+.app__container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 70px 5%;
+  position: relative;
+  width: 1600px;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
+  text-align: center;
+
+  h1 {
+    color: var(--color-logo);
+    font-size: 3rem;
+  }
+
+  span {
+    border-bottom: 1px solid var(--color-text-highlight);
+    border-top: 1px solid var(--color-text-highlight);
+    color: var(--color-text-highlight);
+    font-size: .9rem;
+    margin: 0 auto;
+  }
+}
+
+.app__loading {
+  animation: rotating 1.5s infinite linear;
+  margin: 0 auto;
+  text-align: center;
+  width: 120px;  
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(359deg);
+  }
+}

@@ -1,0 +1,51 @@
+/* ==========================================================================
+ Base
+ ========================================================================== */
+
+/* Fonts */
+
+ @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+/* Variables */
+
+:root {
+  --font-base: 'Barlow', Sans-Serif;
+
+  --color-logo: rgba(255, 255, 255, 1);
+  --color-photo-frame: rgba(32, 36, 55, .5);
+  --color-like: rgba(255, 74, 63, 1);
+
+  --color-text-base: rgba(153, 153, 153, 1);
+  --color-text-highlight: rgba(32, 206, 85, 1);
+}
+
+/* Normalize */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Base */
+
+body {
+  background: rgba(19, 14, 34, 1);
+  background: linear-gradient(rgba(8, 49, 65, 1) 0%, rgba(19, 14, 34, 1) 20% );
+  color: var(--color-text-base);
+  font: 100%/1.4 var(--font-base);
+}
+
+p { 
+  margin: 0 0 1.4rem;
+}
